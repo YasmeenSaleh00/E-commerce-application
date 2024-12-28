@@ -94,7 +94,7 @@ namespace E_commerce_application.Controllers
 
         [HttpGet]
         [Route("[action]/{CartId}")]
-        public async Task<IActionResult> GetCartItemsByCartId([FromRoute] int CartId, [FromHeader] string token)
+        public async Task<IActionResult> GetCartItemsByCartId([FromHeader] string token, [FromRoute] int CartId)
         {
             Log.Information("Operation of Get CartItems By CartId Has Been Started");
             try
